@@ -6,7 +6,7 @@
   "scripts": {
     "startParcel": "parcel index.html",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file finals.js",
-    "build:js": "parcel build index.js",
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file finals.js",
     "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "iamhammyboi19",
