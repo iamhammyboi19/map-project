@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "start": "node app.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file finals.js",
@@ -23,8 +26,5 @@
     "pug": "^3.0.2",
     "regenerator-runtime": "^0.13.9",
     "twilio": "^3.82.0"
-  },
-  "engines": {
-    "node": ">=16.0.0"
   }
 }

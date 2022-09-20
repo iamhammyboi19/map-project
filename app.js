@@ -48,5 +48,12 @@ process.on("unhandledRejection", (err) => {
   //   console.log("restarting server");
   // });
 });
+
+process.on("SIGTERM", () => {
+  console.log("SIGTERM RECIEVED, Shutting down gracefully.");
+  server.close(() => {
+    console.log("Process terminated!");
+  });
+});
 // +13024054507
 // +13024054507
