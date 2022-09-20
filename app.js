@@ -4,7 +4,7 @@ const path = require("path");
 const dotenv = require("dotenv").config({ path: "./config.env" });
 
 const app = express();
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT;
 const client = require("twilio")(process.env.ACCOUNTSID, process.env.AUTHTOKEN);
 
 app.use(express.static("public"));
