@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file finals.js",
+    "start": "node app.js",
+    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file finals.js",
     "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file finals.js"
   },
   "author": "iamhammyboi19",
