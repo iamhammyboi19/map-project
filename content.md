@@ -119,3 +119,21 @@
 // alaykoyPD: [35.183854893170285, 33.25614426879475],
 // lidrasPD: [35.174876596027495, 33.361479697629804],
 // };
+
+<!-- ee2d5cfe775805169f353cb25aa7e50f -->
+<!-- AC2656bb865e81ba928d2f59a3ab53c6d1 -->
+
+<!--  -->
+
+const accountSid = 'AC086255c6a398c96989ce389cbc7c2809';
+const authToken = '[AuthToken]';
+const client = require('twilio')(accountSid, authToken);
+
+client.messages
+.create({
+body: 'Ambulance is coming to your location in 3mins',  
+ messagingServiceSid: 'Helper',  
+ to: '+905338897286'
+})
+.then(message => console.log(message.sid))
+.done();

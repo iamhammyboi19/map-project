@@ -3,10 +3,26 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 import { DEFAULT_MAP_ZOOM_LEVEL } from "./config.js";
 import distance from "./helpers.js";
+import axios from "axios";
 
 const inputSearch = document.querySelector(".address-input--");
 const address = document.querySelector(".address-div");
 const helpBtn = document.querySelector(".help-btn");
+
+const getHelpFunc = async function (option) {
+  try {
+    const res = await axios({
+      method: "GET",
+      url: "/helpMe",
+    });
+    if (res.status === "success") {
+      alert(`${option} is on the way`);
+    }
+  } catch {
+    console.log(res);
+    alert(res.err.message);
+  }
+};
 
 class MapApp {
   #lat;
@@ -121,8 +137,10 @@ class MapApp {
     const theInputCheckComp = theInputCheck.toLowerCase().trim();
     if (theInputCheckComp === "hospital") {
       this.#nearestLocationPopup(this.#theHospitals);
+      getHelpFunc("Ambulance");
     } else if (theInputCheckComp === "police") {
       this.#nearestLocationPopup(this.#policeStations);
+      getHelpFunc("Police");
     } else {
       alert("Please enter the correct emergency you need help with");
     }

@@ -2,18 +2,26 @@
   "name": "mapappproject",
   "version": "1.0.0",
   "description": "",
-  "default": "index.html",
+  "main": "final.js",
   "scripts": {
     "startParcel": "parcel index.html",
+    "watch:js": "parcel watch ./public/js/index.js ./public/js",
+    "build:js": "parcel build index.js",
     "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "iamhammyboi19",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.6.2"
+    "buffer": "^6.0.3",
+    "parcel": "^2.6.2",
+    "process": "^0.11.10"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "core-js": "^3.23.3",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "pug": "^3.0.2",
     "regenerator-runtime": "^0.13.9"
   }
 }
