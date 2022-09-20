@@ -2,12 +2,12 @@
   "name": "mapappproject",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "engines": {
     "node": ">=16.0.0"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "node server.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file finals.js",
     "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file finals.js"
   },
