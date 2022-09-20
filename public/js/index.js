@@ -1,6 +1,6 @@
 "use strict";
-import "core-js/stable";
-import "regenerator-runtime/runtime";
+// import "core-js/stable";
+// import "regenerator-runtime/runtime";
 import { DEFAULT_MAP_ZOOM_LEVEL } from "./config.js";
 import distance from "./helpers.js";
 import axios from "axios";
@@ -9,18 +9,17 @@ const inputSearch = document.querySelector(".address-input--");
 const address = document.querySelector(".address-div");
 const helpBtn = document.querySelector(".help-btn");
 
-const getHelpFunc = async function (option) {
+const getHelpFunc = async function (help) {
   try {
     const res = await axios({
       method: "GET",
       url: "/helpMe",
     });
-    if (res.status === "success") {
-      alert(`${option} is on the way`);
+    if (res.data.status === "success") {
+      alert(`${help} is on the way`);
     }
-  } catch {
-    console.log(res);
-    alert(res.err.message);
+  } catch (err) {
+    alert(err.response.data.message);
   }
 };
 

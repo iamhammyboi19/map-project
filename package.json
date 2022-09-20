@@ -2,10 +2,10 @@
   "name": "mapappproject",
   "version": "1.0.0",
   "description": "",
-  "main": "final.js",
+  "main": "server.js",
   "scripts": {
     "startParcel": "parcel index.html",
-    "watch:js": "parcel watch ./public/js/index.js ./public/js",
+    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file finals.js",
     "build:js": "parcel build index.js",
     "build": "parcel build index.html --dist-dir ./dist"
   },
@@ -13,7 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "buffer": "^6.0.3",
-    "parcel": "^2.6.2",
+    "parcel-bundler": "^1.12.5",
     "process": "^0.11.10"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "pug": "^3.0.2",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "twilio": "^3.82.0"
   }
 }
