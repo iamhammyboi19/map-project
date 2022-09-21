@@ -45,10 +45,6 @@ const server = app.listen(port, () => {
 
 process.on("unhandledRejection", (err) => {
   console.log(err);
-  // console.log(`Shutting down - ${err.message}`);
-  // server.close(() => {
-  //   console.log("restarting server");
-  // });
 });
 
 process.on("SIGTERM", () => {
@@ -57,5 +53,3 @@ process.on("SIGTERM", () => {
     console.log("Process terminated!");
   });
 });
-// +13024054507
-// +13024054507
